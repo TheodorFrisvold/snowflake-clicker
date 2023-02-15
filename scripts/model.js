@@ -1,27 +1,39 @@
 const Model = {
     main: {
-        snowflakes: 0,
-        snowflakesPerClick: 1,
-        snowflakesPerSecond: 0,
+        currency: 0,
+        currencyPerClick: 1,
+        currencyPerSecond: 0,
     },
     upgrades: {
-        shovel:{
+        developer:{
             cost: 10,
             amount: 0,
-            snowflakesPerSecond: 1,
-            costMultiplier: 1.5,
+            currencyPerSecond: 1,
+            costMultiplier: 1.15,
         },
-        upgrade2: {
+        lukesmith: {
             cost: 100,
             amount: 0,
-            snowflakesPerSecond: 5,
-            costMultiplier: 1.5,
+            currencyPerSecond: 5,
+            costMultiplier: 1.15,
         },
-        upgrade3: {
+        joeblackburn: {
             cost: 1000,
             amount: 0,
-            snowFlakesPerSecond: 25,
-            costMultiplier: 1.5,
+            currencyPerSecond: 25,
+            costMultiplier: 1.15,
+        },        
+        dmg04: {
+            cost: 10000,
+            amount: 0,
+            currencyPerSecond: 125,
+            costMultiplier: 1.15,
+        },
+        player1: {
+            cost: 100000,
+            amount: 0,
+            currencyPerSecond: -625,
+            costMultiplier: 0.01,
         },
     }
 }
