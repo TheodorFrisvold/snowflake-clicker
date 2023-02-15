@@ -1,6 +1,7 @@
 var showCurrency;
 var ticksPerSecond = 20;
 var msPerTick = 1000/ticksPerSecond;
+var store = document.getElementById("store-container");
 
 function init(){
     //initializes game
@@ -9,6 +10,30 @@ function init(){
     if (x != null) {
         //execute code to import saved data from cookie
     }
+
+}
+
+function addStoreElements(){
+    // console.log("length of upgrades " + Object.keys(Model.upgrades).length);
+    var keys = Object.keys(Model.upgrades);
+
+    for (let i = 0; i < Object.keys(Model.upgrades).length; i++) {
+        console.log("Iterating through forloop in addStoreElements, currently on index " + i);
+        var key = keys[i];
+
+        var cost = Model.upgrades[key].cost;
+        var currencyPerSecond = Model.upgrades[key].currencyPerSecond;
+
+        console.log("Working on " + Model.upgrades[key].name);
+        store.innerHTML +=
+        `
+        <div>
+        Buy ${Model.upgrades[key].name}
+        Price ${cost}
+        Benefit ${currencyPerSecond}
+        </div>
+        `;
+    }  
 }
 
 setInterval(updateGame, msPerTick);
