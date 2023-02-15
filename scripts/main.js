@@ -13,7 +13,7 @@ function init(){
 
 setInterval(updateGame, msPerTick);
 
-function clickedSnowflake(){
+function clickedCurrency(){
     Model.main.snowflakes += Model.main.snowflakesPerClick;
 }
 function updateGame(){
