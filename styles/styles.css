@@ -2,28 +2,45 @@
     display: grid;
     grid-template-columns: 20% 60% 20%;
     padding: 10px;
-    height: 100vh;
+    height: 95vh;
+    word-wrap: break-word;
   }
-  .grid-item {
+.grid-item {
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    align-items: center;
     height: 90vh;
-  }
-  #snowflake-img {
+}
+.img {
     max-width: 100%;
     max-height: 100%;
-  }
-  .img {
+}
+.img {
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-  }
+}
   
-  body {
-    background-image: url("../assets/images/background.jpg");
-    background-color: aqua;
-   }
+body {
+    background-image: url("../assets/images/background-d2.jpg");
+    background-size: 100%;
+    background-position: top;
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+  }
+#showFlakes {
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  }
+#store {
+
+}
+.text {
+  color:azure;
+  text-shadow: 1px 1px 2px gray;
+}

@@ -10,14 +10,22 @@
     <script src="scripts/model.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body onload="init()">
+<body onload="init()" class="text">
     <div class="grid-container">
-        <div class="grid-item" onclick="clickedSnowflake()">
-            <img src="assets/images/snowflake.png" id="snowflake-img" class="img">
-            <div id="showFlakes">showflakes</div>
+        <div id="snowflake-div"class="grid-item" onclick="clickedSnowflake()">
+            <img src="assets/images/Silver.png" id="snowflake-img" class="img">
+            <div id="showFlakes"></div>
         </div>
-        <div class="grid-item">grid 2</div>
-        <div class="grid-item">grid 3</div>
+        <div id="upgrade-display-div" class="grid-item"></div>
+        <div id="store-container" class="grid-item">
+            <div id="store">Buy Upgrades</div>
+            <div id="shovel" onclick="buyUpgrade(shovel)">
+                <p>Buy some fomo!</p>
+                <p>+1 Silver Per Click</p>
+                <p>+1 Silver Per Second</p>
+                <img src="assets/images/fomo.jpg" id="shovel-img" class="img">
+            </div>
+        </div>
     </div>        
 </body>
 </html>
