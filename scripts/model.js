@@ -1,6 +1,6 @@
 const Model = {
     main: {
-        currency: 0,
+        currency: 100000,
         currencyPerClick: 1,
         currencyPerSecond: 0,
     },

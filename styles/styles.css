@@ -1,6 +1,6 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 40% 60% 20%;
     padding: 10px;
     height: 95vh;
     word-wrap: break-word;
@@ -11,7 +11,7 @@
     font-size: 30px;
     text-align: center;
     align-items: center;
-    height: 90vh;
+    height: auto;
 }
 .img {
     max-width: 100%;
@@ -27,19 +27,50 @@
   
 body {
     background-image: url("../assets/images/background-d2.jpg");
+    background-attachment: fixed;
     background-size: 100%;
     background-position: top;
     background-color: rgb(0, 0, 0);
     background-repeat: no-repeat;
   }
+
+#snowflake-div {
+  position: fixed;
+  z-index: 1;
+}
+#upgrade-display-div{
+  position: fixed;
+
+}
+
 #showFlakes {
   text-align: center;
   margin: auto;
   border-radius: 10px;
   }
+#store-container{
+  position: absolute;
+  right: 0;
+  max-height: auto;
+}
 #store {
+  background-color: none;
+  overflow: auto;
+  align-content: right;
+}
+
+#store-element{
+  max-height: 50%;
+  min-height: 25%;
+  max-width: 100%;
 
 }
+#store-img{
+  max-width: auto;
+  max-height: 20vh;
+  min-height: 20vh;
+}
+
 .text {
   color:azure;
   text-shadow: 1px 1px 2px gray;
