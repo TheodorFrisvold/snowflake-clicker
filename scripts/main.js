@@ -60,6 +60,7 @@ function buyUpgrade(type) {
         upgrade.cost = newCost;
         Model.main.currencyPerSecond += upgrade.currencyPerSecond;
         document.getElementById(`${upgrade.name}-price`).innerHTML = `Price ${Math.ceil(newCost)}`
+        console.log("Debug");
     }
 }
 
