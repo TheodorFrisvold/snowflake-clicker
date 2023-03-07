@@ -1,19 +1,25 @@
 var showCurrency;
 var ticksPerSecond = 20;
 var msPerTick = 1000/ticksPerSecond;
+var msPerSave = 60000;
 var store = document.getElementById("store-container");
+
+setInterval(updateGame, msPerTick);
+setInterval(saveGame, msPerSave);
 
 //test 
 function init(){
     //initializes game
     showCurrency = document.getElementById("showCurrency");
-    addStoreElements();
     let x = document.cookie;
-    if (x != null) {
+    if (x.length > 0) {
         //execute code to import saved data from cookie
+        restoreGame(x);
     }
-
+    addStoreElements();
 }
+
+
 
 function addStoreElements(){
     // console.log("length of upgrades " + Object.keys(Model.upgrades).length);
@@ -32,15 +38,13 @@ function addStoreElements(){
         `
         <div id="store-element" onclick="buyUpgrade('${name}')">
         Buy ${name}
-        <div><img src="./assets/images/${name}.png" id="store-img"></div>
-        <p id="${name}-price">Price ${cost}</p>
+        <div><img src="./assets/images/${name}.png" onerror="this.onerror=null; this.src='./assets/images/default.png'" id="store-img"></div>
+        <p id="${name}-price">Price ${Math.ceil(cost)}</p>
         Adds ${currencyPerSecond} silver per second
         </div>
         `;
     }  
 }
-
-setInterval(updateGame, msPerTick);
 
 function clickedCurrency(){
     Model.main.currency += Model.main.currencyPerClick;
@@ -66,5 +70,19 @@ function buyUpgrade(type) {
 
 
 function saveGame(){
-    document.cookie = gameSave;
+    document.cookie = generateGameSave();
+}
+
+function generateGameSave(){
+    var save = JSON.stringify(Model);
+    return save;
+}
+
+function restoreGame(save){
+    Model = JSON.parse(save);
+}
+
+function resetGame(){
+    //needs confirmation check
+    Model = MainModel;
 }
