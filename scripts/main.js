@@ -3,6 +3,7 @@ var ticksPerSecond = 20;
 var msPerTick = 1000/ticksPerSecond;
 var store = document.getElementById("store-container");
 
+//test 
 function init(){
     //initializes game
     showCurrency = document.getElementById("showCurrency");
