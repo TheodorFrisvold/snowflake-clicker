@@ -37,9 +37,7 @@ function setGameInterval() {
       updateGame();
     }
   }, msPerTick);
-
 }
-
 
 function refocused(un, re) {
   if (un == null) return;

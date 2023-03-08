@@ -76,12 +76,20 @@ body {
   max-height: 50%;
   min-height: 25%;
   max-width: 100%;
-
 }
+
 #store-img{
   max-width: auto;
   max-height: 20vh;
   min-height: 20vh;
+
+/* Prevent image from being dragged */
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
 }
 #tooltip-box {
   position: fixed;
