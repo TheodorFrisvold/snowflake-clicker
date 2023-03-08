@@ -21,15 +21,17 @@
             <div id="store"><h1>Upgrades</h1></div>
         </div>
     </div>
-    <div id="reset-save-btns">
-        <div id="reset-btn" class="btn" onclick="resetGame()">
-            <h1>RESET</h1>
+    <div id="reset-save-btns" class="btn-container">
+        <div id="reset-btn" class="btn" >
+            <h1 onclick="resetGame()">RESET</h1>
         </div>
         <div id="save-btn" class="btn" onclick="saveGame(true)">
         <h1>SAVE</h1>
         </div>
-
         </div>        
+    </div>
+    <div id="tooltip-box">
+        <p id="tooltip">Game is saved automatically every 60 seconds.</p>
     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 let Model = {
     main: {
-        currency: 100000,
+        currency: 0,
         currencyPerClick: 1,
         currencyPerSecond: 0,
     },
@@ -33,18 +33,25 @@ let Model = {
             currencyPerSecond: 125,
             costMultiplier: 1.15,
         },
-        player1: {
-            name: "Bungie",
+        DevTeam: {
+            name: "DevTeam",
             cost: 100000,
             amount: 0,
             currencyPerSecond: 625,
+            costMultiplier: 1.15,
+        },        
+        Bungie: {
+            name: "Bungie",
+            cost: 1000000,
+            amount: 0,
+            currencyPerSecond: 3125,
             costMultiplier: 1.15,
         },
     }
 }
 const MainModel = {
     main: {
-        currency: 100000,
+        currency: 0,
         currencyPerClick: 1,
         currencyPerSecond: 0,
     },
@@ -77,11 +84,18 @@ const MainModel = {
             currencyPerSecond: 125,
             costMultiplier: 1.15,
         },
-        player1: {
-            name: "Bungie",
+        DevTeam: {
+            name: "DevTeam",
             cost: 100000,
             amount: 0,
             currencyPerSecond: 625,
+            costMultiplier: 1.15,
+        },        
+        Bungie: {
+            name: "Bungie",
+            cost: 1000000,
+            amount: 0,
+            currencyPerSecond: 3125,
             costMultiplier: 1.15,
         },
     }
