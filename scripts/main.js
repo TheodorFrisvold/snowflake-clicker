@@ -69,7 +69,10 @@ function buyUpgrade(type) {
 }
 
 
-function saveGame(){
+function saveGame(isManual){
+    if(isManual){
+        alert("Game saved successfully!");
+    }
     document.cookie = generateGameSave();
 }
 
@@ -83,6 +86,11 @@ function restoreGame(save){
 }
 
 function resetGame(){
-    //needs confirmation check
-    Model = MainModel;
+    if (confirm("Are you sure you want to reset?")){
+        Model = MainModel;
+        saveGame();
+        alert("Game was reset");        
+    } else {
+        alert("Game was not reset");
+    }
 }
